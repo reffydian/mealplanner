@@ -1,0 +1,21 @@
+{
+    "name": "Perencana Menu Sederhana",
+    "short_name": "MenuPlan",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "description": "Aplikasi perencana menu dan daftar belanja sederhana.",
+    "icons": [
+        {
+            "src": "icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
