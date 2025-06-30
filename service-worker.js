@@ -1,9 +1,9 @@
-const CACHE_NAME = 'menu-planner-v2'; // Naikkan versi cache agar SW update
+const CACHE_NAME = 'menu-planner-v2';
 const URLS_TO_CACHE = [
     '/',
     '/index.html',
-    '/planner.html',   // <-- FILE BARU
-    '/shopping.html',  // <-- FILE BARU
+    '/planner.html',
+    '/shopping.html',
     '/style.css',
     '/script.js',
     '/manifest.json',
@@ -11,7 +11,6 @@ const URLS_TO_CACHE = [
     '/icon-512.png'
 ];
 
-// Event 'install' (tidak perlu diubah, hanya pastikan nama cache sudah baru)
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -22,7 +21,6 @@ self.addEventListener('install', event => {
     );
 });
 
-// Tambahkan event 'activate' untuk membersihkan cache lama
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -37,7 +35,6 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Event 'fetch' (tidak perlu diubah)
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)

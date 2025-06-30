@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Kode ini akan berjalan di SEMUA halaman
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js')
             .then(reg => console.log('Service Worker terdaftar', reg))
             .catch(err => console.error('Gagal mendaftar Service Worker', err));
     }
 
-    // --- KODE KHUSUS HALAMAN RENCANA MENU ---
+    // --- KODE HALAMAN RENCANA MENU ---
     const mealPlannerEl = document.getElementById('meal-planner');
     if (mealPlannerEl) {
         const days = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mealPlannerEl.addEventListener('input', saveMealPlan);
     }
 
-    // --- KODE KHUSUS HALAMAN DAFTAR BELANJA ---
+    // --- KODE HALAMAN DAFTAR BELANJA ---
     const shoppingFormEl = document.getElementById('shopping-form');
     if (shoppingFormEl) {
         const itemInput = document.getElementById('item-input');
